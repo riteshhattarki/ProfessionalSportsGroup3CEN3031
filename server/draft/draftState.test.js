@@ -1,3 +1,5 @@
+
+//These are the test cases we have to run. This is specifically for the round reversal logic because this is what majority of our project runs on
 const test = require("node:test");
 const assert = require("node:assert");
 const { startDraft, whoseTurn, makePick, isDone } = require("./draftState");
