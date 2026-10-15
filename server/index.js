@@ -7,6 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/api/auth", require("./routes/auth"));
+app.use("/api/leagues", require("./routes/leagues"));
 
 app.get('/', (req, res) => {
   res.send('Dynasty Drafters API running');
