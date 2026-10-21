@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useAuth, API_URL } from "./AuthContext";
+import { useAuth, API_URL } from "./context/AuthContext";
 import useDraftSocket from "./useDraftSocket";
 import Card from "./components/Card";
 import Button from "./components/Button";
