@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { API_URL } from "./AuthContext";
+import { API_URL } from "./context/AuthContext";
 
 // gives back the latest draft and updates by itself when anyone makes a pick
 function useDraftSocket(leagueId, token) {
