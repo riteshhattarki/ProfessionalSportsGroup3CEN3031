@@ -6,6 +6,7 @@ import Button from "./components/Button";
 import PageHeader from "./components/PageHeader";
 import FormMessage from "./components/FormMessage";
 
+// who is on the clock, same snake rules as the server
 function whoIsOnTheClock(draft) {
   const teamCount = draft.teams.length;
   if (draft.pickNumber >= teamCount * draft.rounds) {
@@ -16,6 +17,7 @@ function whoIsOnTheClock(draft) {
   return round % 2 === 0 ? draft.teams[spot] : draft.teams[teamCount - 1 - spot];
 }
 
+// placeholder player list until the player search story is done
 const queue = ["Player C", "Player D", "Player E", "Player F"];
 
 function DraftRoom({ leagueId }) {
@@ -37,6 +39,7 @@ function DraftRoom({ leagueId }) {
       const data = await response.json();
       setMessage(data.message);
     }
+    // on success the socket sends the new draft to everyone, so nothing else to do here
   }
 
   if (!draft) {
